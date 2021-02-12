@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="752.0" prefWidth="1165.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WrittenExamController">
+   <children>
+      <TableView fx:id="tableWrittenExam" layoutX="535.0" layoutY="218.0" prefHeight="343.0" prefWidth="553.0">
+         <columns>
+            <TableColumn fx:id="columnExamID" prefWidth="102.591064453125" text="Exam ID" />
+            <TableColumn fx:id="columnDate" prefWidth="122.4632568359375" text="Date" />
+            <TableColumn fx:id="columnTime" prefWidth="99.0" text="Time" />
+            <TableColumn fx:id="columnLocation" prefWidth="117.5" text="Location" />
+            <TableColumn fx:id="columnCourseCodeExam" minWidth="0.0" prefWidth="107.5" text="Course code" />
+         </columns>
+      </TableView>
+      <Label layoutX="62.0" layoutY="157.0" prefHeight="21.0" prefWidth="156.0" text="Exams">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxCourse" layoutX="64.0" layoutY="222.0" prefWidth="150.0" />
+      <DatePicker fx:id="datePickerExam" layoutX="63.0" layoutY="318.0" />
+      <Label layoutX="65.0" layoutY="200.0" text="Course:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="250.0" text="Location:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxLocation" layoutX="64.0" layoutY="268.0" prefWidth="150.0" />
+      <Label layoutX="63.0" layoutY="300.0" text="Date:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxTime" layoutX="63.0" layoutY="364.0" prefWidth="150.0" />
+      <Label layoutX="62.0" layoutY="348.0" text="Time.*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="198.0" text="ExamID:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtExamID" layoutX="296.0" layoutY="219.0" prefHeight="27.0" prefWidth="194.0" />
+      <Button layoutX="62.0" layoutY="399.0" mnemonicParsing="false" onAction="#addWrittenExam" text="Add exam">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="297.0" layoutY="257.0" mnemonicParsing="false" onAction="#updateWrittenExam" text="Update exam">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="401.0" layoutY="257.0" mnemonicParsing="false" onAction="#removeWrittenExam" text="Remove exam">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="choiceBoxWrittenExam" layoutX="61.0" layoutY="502.0" prefWidth="150.0" />
+      <Label layoutX="62.0" layoutY="480.0" text="Choose exam:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="449.0" prefHeight="28.0" prefWidth="162.0" text="Exam statistics">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="62.0" layoutY="536.0" mnemonicParsing="false" onAction="#showStatistics" text="Get statistics">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="61.0" layoutY="695.0" mnemonicParsing="false" onAction="#loadWelcomeView" text="Back to menu">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="71.0" fitWidth="66.0" layoutX="1077.0" layoutY="667.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/LogoMakr-0fGnya.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

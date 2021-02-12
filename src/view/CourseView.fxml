@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="752.0" prefWidth="1165.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CourseController">
+   <children>
+      <ImageView fitHeight="48.0" fitWidth="56.0" layoutX="1057.0" layoutY="661.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/LogoMakr-0fGnya.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="92.0" layoutY="687.0" mnemonicParsing="false" onAction="#loadWelcomeView" text="Back to menu">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableCourse" layoutX="503.0" layoutY="173.0" prefHeight="426.0" prefWidth="522.0">
+         <columns>
+            <TableColumn fx:id="columnCourseCode" prefWidth="136.0" text="Couse code" />
+            <TableColumn fx:id="columnCourseName" prefWidth="292.0" text="Couse name" />
+            <TableColumn fx:id="columnCourseCredits" prefWidth="90.0" text="Credits" />
+         </columns>
+      </TableView>
+      <Label layoutX="91.0" layoutY="135.0" prefHeight="20.0" prefWidth="156.0" text="Courses">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseName" layoutX="189.0" layoutY="198.0" />
+      <Label layoutX="93.0" layoutY="203.0" text="Course name:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="239.0" text="Credits:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCourseCode" layoutX="189.0" layoutY="335.0" />
+      <Button layoutX="92.0" layoutY="266.0" mnemonicParsing="false" onAction="#addCourse" text="Add course">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="93.0" layoutY="178.0" text="System will generate a course code.">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="341.0" text="Course Code:*">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="92.0" layoutY="381.0" mnemonicParsing="false" onAction="#updateCourse" text="Update course">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="212.0" layoutY="381.0" mnemonicParsing="false" onAction="#removeCourse" text="Remove course">
+         <font>
+            <Font name="Helvetica Neue" size="13.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="choiceBoxCredits" layoutX="189.0" layoutY="234.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
